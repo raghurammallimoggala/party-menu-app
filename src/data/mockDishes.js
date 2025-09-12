@@ -1,0 +1,58 @@
+const dishes = [
+  {
+    id: 1,
+    name: "Paneer Tikka",
+    category: "STARTER",
+    isVeg: true,
+    ingredients: ["Paneer", "Yogurt", "Spices"],
+    price: 150,
+    image: "Paneer Tikka.jpeg",
+  },
+  {
+    id: 2,
+    name: "Chicken Wings",
+    category: "STARTER",
+    isVeg: false,
+    ingredients: ["Chicken", "Spices", "Sauce"],
+    price: 200,
+    image: "Chicken Wings.jpg",
+  },
+  {
+    id: 3,
+    name: "Veg Biryani",
+    category: "MAIN COURSE",
+    isVeg: true,
+    ingredients: ["Rice", "Vegetables", "Spices"],
+    price: 250,
+    image: "Veg Biryani.jpeg",
+  },
+  {
+    id: 4,
+    name: "Mutton Curry",
+    category: "MAIN COURSE",
+    isVeg: false,
+    ingredients: ["Mutton", "Onions", "Tomatoes", "Spices"],
+    price: 300,
+    image: "Mutton Curry.jpeg",
+  },
+  {
+    id: 5,
+    name: "Gulab Jamun",
+    category: "DESSERT",
+    isVeg: true,
+    ingredients: ["Milk Solids", "Sugar", "Cardamom"],
+    price: 120,
+    image: "Gulab Jamun.jpeg",
+  },
+  {
+    id: 6,
+    name: "Ice Cream",
+    category: "DESSERT",
+    isVeg: true,
+    ingredients: ["Milk", "Sugar", "Flavour"],
+    price: 100,
+    image: "Ice Cream.jpg",
+  },
+];
+
+export default dishes;

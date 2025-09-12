@@ -1,0 +1,85 @@
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left, #cf29b1, #20cde0);
+  padding: 24px 32px;
+  border-radius: 12px;
+  width: 420px;
+  max-width: 90%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+.modal-title {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Roboto";
+  margin-bottom: 6px;
+  color: #333;
+}
+
+
+.modal-description {
+  font-size: 15px;
+  color: #555;
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 1.4;
+}
+.ingredient-container{
+  display: flex;
+  flex-direction: row;
+  justify-self: start;
+}
+
+.ingredient-item{
+  display: flex;
+  flex-direction: column;
+
+}
+.ingredient-list {
+  margin: 0 0 15px 20px;
+  padding: 0;
+  list-style: disc;
+  color: #444;
+  font-size: 17px;
+  font-family: "Roboto";
+  margin-top: 35px;
+  margin-right: 45px;
+}
+
+
+.close-btn {
+  background: #d32f2f;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #b71c1c;
+}
+
+

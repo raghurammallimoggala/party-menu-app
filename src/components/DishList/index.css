@@ -1,0 +1,15 @@
+.dish-list-container {
+  display: flex;
+  flex-wrap: wrap;    
+  gap: 20px;          
+  justify-content: center; 
+  padding: 20px;
+}
+
+.no-dishes {
+  font-size: 16px;
+  font-weight: 500;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
