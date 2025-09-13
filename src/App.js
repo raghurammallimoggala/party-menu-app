@@ -8,7 +8,8 @@ import './App.css';
 function App() {
   const [selectedCategory, setSelectedCategory]=useState("ALL");
   const [searchTerm, setSearchTerm]=useState("");
-  const [vegOnly, setVegOnly]=useState(false);
+  const [veg, setVeg]=useState(false);
+  const[nonVeg, setNonVeg]=useState(false)
   const [selectedDishes,setSelectedDishes]=useState([]);
   const [isModalOpen, setIsModalOpen]=useState(false);
   const [currentDish, setCurrentDish]=useState(null);
@@ -19,9 +20,17 @@ function App() {
     selectedCategory=== "ALL" || dish.mealType === selectedCategory;
     const matchesSearch=dish.name.toLowerCase().includes(searchTerm.toLowerCase());
 
-    const matchesVeg=!vegOnly || dish.isVeg;
-    return matchesCategory && matchesSearch && matchesVeg;
-  })
+    let matchesType = true; 
+  if (veg && !nonVeg) {
+    matchesType = dish.type === "VEG";
+  } else if (!veg && nonVeg) {
+    matchesType = dish.type === "NON-VEG";
+  } else if (!veg && !nonVeg) {
+    matchesType = true; 
+  }
+
+  return matchesCategory && matchesSearch && matchesType;
+  });
 
   const handleAddDish = (dishId) => {
     if (!selectedDishes.includes(dishId)) {
@@ -51,8 +60,10 @@ const openModal = (dish) => {
       onCategoryChange={setSelectedCategory}
       searchTerm={searchTerm}
       onSearchChange={setSearchTerm}
-      vegOnly={vegOnly}
-      onVegOnlyChange={setVegOnly}
+      veg={veg}
+      onVegChange={setVeg}
+      nonVeg={nonVeg}
+      onNonVegChange={setNonVeg}
       />
       <DishList
         dishes={filteredDishes}

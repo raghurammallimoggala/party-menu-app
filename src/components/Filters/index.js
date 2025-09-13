@@ -4,8 +4,10 @@ function Filters({
     onCategoryChange,
     searchTerm,
     onSearchChange,
-    vegOnly,
-    onVegOnlyChange}){
+    veg,
+    nonVeg,
+    onVegChange,
+    onNonVegChange}){
         const category=["ALL","STARTER", "MAIN COURSE", "DESSERT", "SIDES"]
     return(
         <div className="filters-container">
@@ -23,13 +25,22 @@ function Filters({
                 value={searchTerm}
                 onChange={(e)=>onSearchChange(e.target.value)}/>
             </div>
-            <div className="veg-toggle">
+            <div className="toggle">
                 <label>
                     <input 
                     type="checkbox"
-                    checked={vegOnly}
-                    onChange={(e)=>onVegOnlyChange(e.target.checked)}
-                    />veg Only
+                    checked={veg}
+                    onChange={(e)=>onVegChange(e.target.checked)}
+                    />Veg
+                </label>
+            </div>
+            <div className="toggle">
+                <label>
+                    <input 
+                    type="checkbox"
+                    checked={nonVeg}
+                    onChange={(e)=>onNonVegChange(e.target.checked)}
+                    />NonVeg 
                 </label>
             </div>
         </div>
