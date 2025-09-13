@@ -7,7 +7,8 @@ function Filters({
     veg,
     nonVeg,
     onVegChange,
-    onNonVegChange}){
+    onNonVegChange,
+    categoryCount}){
         const category=["ALL","STARTER", "MAIN COURSE", "DESSERT", "SIDES"]
     return(
         <div className="filters-container">
@@ -15,7 +16,8 @@ function Filters({
                 {category.map((cat)=>(
                     <button key={cat} type="button" 
                     className={`tab-btn ${activeCategory === cat ? "active" : ""}`} 
-                    onClick={()=>onCategoryChange(cat)}>{cat}</button>
+                    onClick={()=>onCategoryChange(cat)}><span className="cat-name">{cat }</span>
+      <span className="cat-count">{categoryCount?.[cat] || 0}</span></button>
                 ))}
             </div>
             <div className="search-bar">

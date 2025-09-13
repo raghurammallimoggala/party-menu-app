@@ -3,7 +3,7 @@ export const dishes = [
     "id": 1,
     "name": "Kadhai Paneer",
     "description": "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    "image": "Kadhai Paneer.jpg",
+    "image": `${process.env.PUBLIC_URL}/Kadhai Paneer.jpg`,
     "mealType": "MAIN COURSE",
     "type": "VEG",
     "ingredients": [
@@ -17,7 +17,7 @@ export const dishes = [
     "id": 2,
     "name": "Chicken Biryani",
     "description": "Aromatic basmati rice cooked with marinated chicken and Indian spices.",
-    "image": "Chicken Wings.jpg",
+    "image": `${process.env.PUBLIC_URL}/Chicken Wings.jpg`,
     "mealType": "MAIN COURSE",
     "type": "NON-VEG",
     "ingredients": [
@@ -31,7 +31,7 @@ export const dishes = [
     "id": 3,
     "name": "Paneer Tikka",
     "description": "Marinated paneer cubes grilled to perfection with smoky flavors.",
-    "image": "Paneer Tikka.jpeg",
+    "image": `${process.env.PUBLIC_URL}/Paneer Tikka.jpeg`,
     "mealType": "STARTER",
     "type": "VEG",
     "ingredients": [
@@ -44,7 +44,7 @@ export const dishes = [
     "id": 4,
     "name": "Chicken Tandoori",
     "description": "Juicy chicken legs marinated in yogurt and spices, cooked in tandoor.",
-    "image": "Chicken Tandoori.jpeg",
+    "image": `${process.env.PUBLIC_URL}/Chicken Tandoori.jpeg`,
     "mealType": "STARTER",
     "type": "NON-VEG",
     "ingredients": [
@@ -57,7 +57,7 @@ export const dishes = [
     "id": 5,
     "name": "Butter Naan",
     "description": "Soft Indian bread baked in tandoor and topped with butter.",
-    "image": "Butter Naan.jpg",
+    "image": `${process.env.PUBLIC_URL}/Butter Naan.jpg`,
     "mealType": "SIDES",
     "type": "VEG",
     "ingredients": [
@@ -70,7 +70,7 @@ export const dishes = [
     "id": 6,
     "name": "Gulab Jamun",
     "description": "Sweet fried dumplings soaked in sugar syrup.",
-    "image": "Gulab Jamun.jpeg",
+    "image": `${process.env.PUBLIC_URL}/Gulab Jamun.jpeg`,
     "mealType": "DESSERT",
     "type": "VEG",
     "ingredients": [
@@ -83,7 +83,7 @@ export const dishes = [
     "id": 7,
     "name": "Mutton Curry",
     "description": "Fresh fish cooked in tangy and spicy curry sauce.",
-    "image": "Mutton Curry.jpeg",
+    "image": `${process.env.PUBLIC_URL}/Mutton Curry.jpeg`,
     "mealType": "MAIN COURSE",
     "type": "NON-VEG",
     "ingredients": [
@@ -97,7 +97,7 @@ export const dishes = [
     "id": 8,
     "name": "Ice Cream Sundae",
     "description": "Chilled vanilla ice cream topped with chocolate syrup and nuts.",
-    "image": "Ice Cream.jpg",
+    "image": `${process.env.PUBLIC_URL}/Ice Cream.jpg`,
     "mealType": "DESSERT",
     "type": "VEG",
     "ingredients": [

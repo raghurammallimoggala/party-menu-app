@@ -14,10 +14,10 @@ function DishCard({dish,
             </div>
             <div className="dish-actions">
                 {isSelected ?(<button className="remove-btn" 
-                onClick={()=>onRemoveDish(dish.id)} 
+                onClick={()=>onRemoveDish(dish)} 
                 aria-label={`Remove ${dish.name}`}>Remove</button>):(
                     <button className="add-btn"
-                     onClick={()=>onAddDish(dish.id)} 
+                     onClick={()=>onAddDish(dish)} 
                      aria-label={`Add ${dish.name}`}>Add</button>
                 )}
             </div>

@@ -13,6 +13,11 @@ function App() {
   const [selectedDishes,setSelectedDishes]=useState([]);
   const [isModalOpen, setIsModalOpen]=useState(false);
   const [currentDish, setCurrentDish]=useState(null);
+  const [dishCounts, setDishCounts]=useState({ALL: 0,
+    STARTER: 0,
+    "MAIN COURSE": 0,
+    DESSERT: 0,
+    SIDES: 0})
 
 
   const filteredDishes=dishes.filter((dish)=>{
@@ -32,14 +37,22 @@ function App() {
   return matchesCategory && matchesSearch && matchesType;
   });
 
-  const handleAddDish = (dishId) => {
-    if (!selectedDishes.includes(dishId)) {
-      setSelectedDishes([...selectedDishes, dishId]);
-    }
+  const handleAddDish = (dish) => {
+    setDishCounts((prev) => ({
+    ...prev,
+    [dish.mealType]: prev[dish.mealType] + 1, 
+    ALL: prev.ALL + 1,                        
+  }));
+    setSelectedDishes((prev) => [...prev, dish.id]);
   };
 
-  const handleRemoveDish = (dishId) => {
-    setSelectedDishes(selectedDishes.filter((id) => id !== dishId));
+  const handleRemoveDish = (dish) => {
+    setDishCounts((prev) => ({
+    ...prev,
+    [dish.mealType]: prev[dish.mealType] > 0 ? prev[dish.mealType] - 1 : 0,
+    ALL: prev.ALL > 0 ? prev.ALL - 1 : 0,
+  }));
+    setSelectedDishes((prev) => prev.filter((id) => id !== dish.id));
   };
   
 const openModal = (dish) => {
@@ -64,6 +77,7 @@ const openModal = (dish) => {
       onVegChange={setVeg}
       nonVeg={nonVeg}
       onNonVegChange={setNonVeg}
+      categoryCount={dishCounts}
       />
       <DishList
         dishes={filteredDishes}
