@@ -10,7 +10,7 @@ function IngredientModal({dish, onClose}){
                 <div className="ingredient-item">
                 <ul className="ingredient-list">
                     {dish.ingredients.map((ing, index)=>(
-                        <li key={index}>{ing}</li>
+                        <li key={index}>{ing.name}- {ing.quantity}</li>
                     ))}
                 </ul>
                 <button className="close-btn" onClick={onClose}>Close</button>

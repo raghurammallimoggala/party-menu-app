@@ -16,7 +16,7 @@ function App() {
 
   const filteredDishes=dishes.filter((dish)=>{
     const matchesCategory=
-    selectedCategory=== "ALL" || dish.category === selectedCategory;
+    selectedCategory=== "ALL" || dish.mealType === selectedCategory;
     const matchesSearch=dish.name.toLowerCase().includes(searchTerm.toLowerCase());
 
     const matchesVeg=!vegOnly || dish.isVeg;

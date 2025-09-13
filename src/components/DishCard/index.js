@@ -10,16 +10,21 @@ function DishCard({dish,
             <img src={dish.image} alt={dish.name} className="dish-image"/>
             <div className="dish-info">
                 <h3 className="dish-name">{dish.name}</h3>
-                <p className="dish-category">{dish.category}</p>
-                <p className="dish-price">₹{dish.price}</p>
+                <p className="dish-category">{dish.mealType}</p>
             </div>
             <div className="dish-actions">
-                {isSelected ?(<button className="remove-btn" onClick={()=>onRemoveDish(dish.id)}>Remove</button>):(
-                    <button className="add-btn" onClick={()=>onAddDish(dish.id)}>Add</button>
+                {isSelected ?(<button className="remove-btn" 
+                onClick={()=>onRemoveDish(dish.id)} 
+                aria-label={`Remove ${dish.name}`}>Remove</button>):(
+                    <button className="add-btn"
+                     onClick={()=>onAddDish(dish.id)} 
+                     aria-label={`Add ${dish.name}`}>Add</button>
                 )}
             </div>
 
-            <button className="ingredients-btn" onClick={()=>onViewIngredients(dish)}>Ingredients</button>
+            <button className="ingredients-btn" 
+            onClick={()=>onViewIngredients(dish)} 
+            aria-label={`View ingredients of ${dish.name}`}>Ingredients</button>
         </div>
 
     )

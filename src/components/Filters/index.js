@@ -6,12 +6,12 @@ function Filters({
     onSearchChange,
     vegOnly,
     onVegOnlyChange}){
-        const categories=["ALL","STARTER", "MAIN COURSE", "DESSERT"]
+        const category=["ALL","STARTER", "MAIN COURSE", "DESSERT", "SIDES"]
     return(
         <div className="filters-container">
             <div className="category-tab">                  
-                {categories.map((cat)=>(
-                    <button type="button" 
+                {category.map((cat)=>(
+                    <button key={cat} type="button" 
                     className={`tab-btn ${activeCategory === cat ? "active" : ""}`} 
                     onClick={()=>onCategoryChange(cat)}>{cat}</button>
                 ))}

@@ -9,6 +9,9 @@ function DishList({dishes,
     if (dishes.length === 0) {
         return <p className="no-dishes">No dishes found</p>;
     }
+
+    const selectedSet = new Set(selectedDishes);
+
     return(
         <div className="dish-list-container">
             {dishes.map((dish)=>(
@@ -18,7 +21,7 @@ function DishList({dishes,
                 onAddDish={onAddDish}
                 onRemoveDish={onRemoveDish}
                 onViewIngredients={onViewIngredients}
-                isSelected={selectedDishes.includes(dish.id)}/>
+                isSelected={selectedSet.has(dish.id)}/>
             ))}
         </div>
 
